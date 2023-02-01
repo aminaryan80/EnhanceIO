@@ -7,7 +7,7 @@ KERNEL_SOURCE_VERSION ?= $(shell uname -r)
 KERNEL_TREE ?= /lib/modules/$(KERNEL_SOURCE_VERSION)/build
 EXTRA_CFLAGS += -I$(KERNEL_TREE)/drivers/md -I./ -DCOMMIT_REV="\"$(COMMIT_REV)\""
 EXTRA_CFLAGS += -I$(KERNEL_TREE)/include/ -I$(KERNEL_TREE)/include/linux 
-obj-m	+= enhanceio.o enhanceio_lru.o enhanceio_fifo.o  enhanceio_rand.o enhanceio_lifo
+obj-m	+= enhanceio.o enhanceio_lru.o enhanceio_fifo.o  enhanceio_rand.o enhanceio_lifo.o
 enhanceio-y	+= \
 	eio_conf.o \
 	eio_ioctl.o \
@@ -19,7 +19,7 @@ enhanceio-y	+= \
 	eio_subr.o \
 	eio_ttc.o
 enhanceio_fifo-y	+= eio_fifo.o
-enhanceio_lifo-y	+= eio_lifo.o
+enhanceio_lifo-y	+= eio_fifo.o
 enhanceio_rand-y	+= eio_rand.o
 enhanceio_lru-y	+= eio_lru.o
 .PHONY: all
