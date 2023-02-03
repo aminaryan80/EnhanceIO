@@ -394,7 +394,7 @@ static const struct eio_policy_and_name eio_policy_names[] = {
 	{ CACHE_REPL_FIFO,   "fifo" },
 	{ CACHE_REPL_LRU,    "lru"  },
 	{ CACHE_REPL_RANDOM, "rand" },
-	{ CACHE_REPL_LIFO, "lifo" },
+	{ CACHE_REPL_LIFO,   "lifo" },
 };
 
 

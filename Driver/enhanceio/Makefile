@@ -19,9 +19,9 @@ enhanceio-y	+= \
 	eio_subr.o \
 	eio_ttc.o
 enhanceio_fifo-y	+= eio_fifo.o
-enhanceio_lifo-y	+= eio_fifo.o
+enhanceio_lifo-y	+= eio_lifo.o
 enhanceio_rand-y	+= eio_rand.o
-enhanceio_lru-y	+= eio_lru.o
+enhanceio_lru-y	    += eio_lru.o
 .PHONY: all
 all: modules
 .PHONY:    modules
